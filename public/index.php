@@ -15,4 +15,24 @@
         return $twig->render('dashboard.twig', array('name' => 'Anton'));
     });
 
+    $app->get('/sites', function() use ($app, $twig) {
+
+        $data = array(
+            'sites' => array(
+                array(
+                    'name' => 'MixCom',
+                    'folder' => 'mixcom',
+                    'link' => 'mixcom.192.168.59.103.xip.io',
+                ),
+                array(
+                    'name' => 'Zorggroep Almere',
+                    'folder' => 'zga',
+                    'link' => 'zga.192.168.59.103.xip.io',
+                ),
+            ),
+        );
+
+        return $twig->render('sites.twig', $data);
+    });
+
     $app->run();
