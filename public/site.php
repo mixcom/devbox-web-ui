@@ -3,14 +3,12 @@
 $site = $app['controllers_factory'];
 
 $site->get('/', function() use ($twig) {
+
+    $siteFinder = new \Devbox\WebUI\SiteFinder(new \Symfony\Component\Finder\Finder());
+    $sites = $siteFinder->find(__DIR__ . '/../../sites');
+
     $data = array(
-      'sites' => array(
-        array(
-          'name' => 'Example website',
-          'folder' => 'example-website',
-          'link' => 'example-website.192.168.59.103.xip.io',
-        ),
-      ),
+      'sites' => $sites,
     );
 
     return $twig->render('sites.twig', $data);
