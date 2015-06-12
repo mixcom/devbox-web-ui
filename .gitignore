@@ -1,2 +1,4 @@
 /vendor/
 public/.htaccess
+**/.idea/workspace.xml
+**/.idea/tasks.xml
