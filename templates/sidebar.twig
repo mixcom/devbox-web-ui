@@ -6,12 +6,12 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="active">
+            <li{% if 'dashboard' == activePage %} class="active"{% endif %}>
                 <a href="/">
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a>
             </li>
-            <li>
+            <li{% if 'sites' == activePage %} class="active"{% endif %}>
                 <a href="/sites">
                     <i class="fa fa-sitemap"></i> <span>All Sites</span>
                 </a>
