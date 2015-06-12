@@ -12,6 +12,9 @@
           <option name="KEEP_RPAREN_AND_LBRACE_ON_ONE_LINE" value="true" />
           <option name="PHPDOC_USE_FQCN" value="true" />
         </PHPCodeStyleSettings>
+        <XML>
+          <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
+        </XML>
         <codeStyleSettings language="JSON">
           <option name="KEEP_BLANK_LINES_IN_CODE" value="2" />
           <indentOptions>
